@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaXamarin.MainPage">
+
+    <StackLayout BackgroundColor="AliceBlue" Orientation="Vertical">
+        <!-- 
+        <Image Source="https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithImages/WorkingWithImages.Android/Resources/drawable/waterfront.jpg" />
+        -->
+
+        <ScrollView>
+            <StackLayout>
+                <Image Source="xamarin.png" Margin="0,10,0,0"  />
+                <Frame Margin="10,20,10,0">
+                    <StackLayout>
+                        <Label Text="Mi primera aplicación Xamarin" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="¿Como te llamas?"  Margin="0,15,0,0"  />
+                            <Entry x:Name="txtNombre" Placeholder="Digita aquí tu nombre" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Fecha Nacimiento:" Margin="0,15,0,0" />
+                            <DatePicker x:Name="dpFechaNacimiento" />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Dirección:" Margin="0,15,0,0"  />
+                            <Editor Keyboard="Plain" AutoSize="TextChanges" MaxLength="180" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Casado? Si" Margin="0,5,0,0" />
+                            <CheckBox x:Name="chkEstadoCivil" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="País:" Margin="0,15,0,0"  />
+                            <Picker x:Name="pPais" Title="Estado Civil">
+                                <!--
+                        <Picker.Items>
+                            <x:String>El Salvador</x:String>
+                            <x:String>Guatemala</x:String>
+                            <x:String>Honduras</x:String>
+                        </Picker.Items>
+                        -->
+
+                            </Picker>
+                        </StackLayout>
+
+
+
+                        <Button Text="Saludar" Clicked="Button_Clicked"  HorizontalOptions="Center" WidthRequest="220" 
+                HeightRequest="35" BackgroundColor="Black" TextColor="White" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>    
+        </ScrollView>
+        
+
+        
+        
+    </StackLayout>
+
+</ContentPage>
